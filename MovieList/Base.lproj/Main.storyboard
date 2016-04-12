@@ -1,25 +1,81 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kGY-wg-hjZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Movie List View Controller-->
+        <scene sceneID="ExO-Wh-XV3">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="kGY-wg-hjZ" customClass="MovieListViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="AcG-7Q-K5R"/>
+                        <viewControllerLayoutGuide type="bottom" id="RSd-Tw-rzP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="a2s-k6-W3Q">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMi-es-EWs">
+                                <rect key="frame" x="20" y="28" width="560" height="135"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="XTB-qu-hH5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do filme" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e1j-2F-jjD">
+                                <rect key="frame" x="20" y="171" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ano" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kdI-hj-ZZj">
+                                <rect key="frame" x="20" y="209" width="442" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZgB-bj-Caj">
+                                <rect key="frame" x="470" y="209" width="110" height="30"/>
+                                <color key="backgroundColor" red="0.28235294117647058" green="0.51372549019607838" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="ojG-xr-3Co"/>
+                                </constraints>
+                                <state key="normal" title="Salvar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="save:" destination="kGY-wg-hjZ" eventType="touchUpInside" id="bXH-M4-cGX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZgB-bj-Caj" firstAttribute="leading" secondItem="kdI-hj-ZZj" secondAttribute="trailing" constant="8" id="2C4-dO-8ll"/>
+                            <constraint firstItem="EMi-es-EWs" firstAttribute="leading" secondItem="a2s-k6-W3Q" secondAttribute="leadingMargin" id="3n8-3G-lF8"/>
+                            <constraint firstItem="ZgB-bj-Caj" firstAttribute="trailing" secondItem="e1j-2F-jjD" secondAttribute="trailing" id="4eI-PV-1HA"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kdI-hj-ZZj" secondAttribute="leading" id="A6i-nS-XQx"/>
+                            <constraint firstItem="EMi-es-EWs" firstAttribute="trailing" secondItem="a2s-k6-W3Q" secondAttribute="trailingMargin" id="SP5-bC-pSo"/>
+                            <constraint firstItem="ZgB-bj-Caj" firstAttribute="top" secondItem="e1j-2F-jjD" secondAttribute="bottom" constant="8" id="Y5m-Ng-Xcz"/>
+                            <constraint firstItem="e1j-2F-jjD" firstAttribute="trailing" secondItem="a2s-k6-W3Q" secondAttribute="trailingMargin" id="gF3-GJ-nOD"/>
+                            <constraint firstItem="kdI-hj-ZZj" firstAttribute="top" secondItem="e1j-2F-jjD" secondAttribute="bottom" constant="8" id="kud-oe-z9n"/>
+                            <constraint firstItem="e1j-2F-jjD" firstAttribute="leading" secondItem="a2s-k6-W3Q" secondAttribute="leadingMargin" id="mY3-58-baW"/>
+                            <constraint firstItem="e1j-2F-jjD" firstAttribute="top" secondItem="EMi-es-EWs" secondAttribute="bottom" constant="8" id="ujF-r0-NCB"/>
+                            <constraint firstItem="EMi-es-EWs" firstAttribute="top" secondItem="AcG-7Q-K5R" secondAttribute="bottom" constant="8" id="vwX-tp-xFB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="movieListLabel" destination="EMi-es-EWs" id="VRU-uW-SkM"/>
+                        <outlet property="movieNameTextField" destination="e1j-2F-jjD" id="l4V-W7-vfO"/>
+                        <outlet property="yearTextField" destination="kdI-hj-ZZj" id="yOt-WY-cIO"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fvs-wF-nBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="14" y="94"/>
         </scene>
     </scenes>
 </document>
